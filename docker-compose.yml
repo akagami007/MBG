@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  db:
+    image: postgis/postgis:15-3.4
+    container_name: mbg_postgis
+    environment:
+      POSTGRES_USER: mbg_user
+      POSTGRES_PASSWORD: mbg_password
+      POSTGRES_DB: mbg_safetrace
+    ports:
+      - "5433:5432"
+    volumes:
+      - mbg_db_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  mbg_db_data:

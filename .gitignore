@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+**/node_modules/
+vendor/
+**/vendor/
+
+# Build outputs
+.next/
+**/.next/
+out/
+**/out/
+dist/
+**/dist/
+build/
+**/build/
+
+# Environment files
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Databases
+*.sqlite
+*.sqlite-journal
+*.sqlite3
+*.localtmp
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+*.log
+.phpunit.result.cache
+*.key
+.vscode/
+
+# Backend storage / cache
+backend/storage/logs/*.log
+backend/storage/framework/cache/*
+!backend/storage/framework/cache/.gitignore
+backend/storage/framework/sessions/*
+!backend/storage/framework/sessions/.gitignore
+backend/storage/framework/views/*
+!backend/storage/framework/views/.gitignore
+backend/bootstrap/cache/*
+!backend/bootstrap/cache/.gitignore
